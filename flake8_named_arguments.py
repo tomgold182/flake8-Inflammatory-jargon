@@ -19,4 +19,4 @@ class Plugin:
         self._tree = tree
 
     def run(self) -> Generator[Tuple[int,int,str,Type[Any]], None, None]:
-        yield 1, 0, 'FNA100 named argument',type(self)
+        yield 1, 0, 'FNA100 named argument', type(self)
