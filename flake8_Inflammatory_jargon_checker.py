@@ -13,7 +13,7 @@ if sys.version_info < (3, 8):
 else:
     import importlib.metadata as importlib_metadata
 
-WORDS_FILE = 'data/words.json'
+WORDS_FILE = 'data/inflammatory_words.json'
 
 
 class InflammatoryJargonPlugin:
@@ -35,7 +35,7 @@ class InflammatoryJargonPlugin:
         yield from self._get_content_errors(lines)
 
     def _get_pattern(self) -> str:
-        """Get a set of bad words."""
+        """Get a set of inflammatory words."""
         return '|'.join(self.Inflammatory_words.keys())
 
     def _get_file_content(self) -> List[str]:
@@ -63,8 +63,7 @@ class InflammatoryJargonPlugin:
             )
 
     def _check_row(self, line: str) -> Generator[Tuple[int, str], None, None]:
-        """Return a list containing bad words and their positions."""
-
+        """Return a list containing inflammatory words and their positions."""
         yield from (
             (match.start(), match.group(1)) for match in self._regex.finditer(line)
         )
