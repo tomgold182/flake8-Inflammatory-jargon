@@ -1,7 +1,7 @@
 # flake8-Inflammatory-jargon
 
 
-A flake8 plugin that checks you code for inflammable words like blacklist, whitelist,master, etc.. and suggests to replace them with more appropriate words
+A flake8 plugin that checks you code fir inflammable words like blacklist, whitelist,master, etc.. and suggests to replace them with more appropriate words
 
 ## What Inflammatory language is?
 Inflammatory language is a form of speech that is used with the intent to stir up emotions, elicit anger, or invoke a physical reaction. Name calling is one form, but the use is generally wider in scope, in the sense that it is used to attack, oppress, or denigrate groups of people, or focus hate or anger on a public figure. (rationalwiki)
