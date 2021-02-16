@@ -37,5 +37,5 @@ flake8-Inflammatory-jargon is highly extensible and built to easily allow the ad
 ## Contributing
 1. Clone
 2. Add more inflammatory words & replacement suggestions the data/inflammatory_words.json file
-3. type `pip install -e .` in order to test your changes (I am using pytest)
+3. Type `pip install -e .` in order to test your changes (I am using pytest)
 3. Submit a PR
