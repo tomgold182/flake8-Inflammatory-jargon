@@ -8,14 +8,7 @@ from pycodestyle import readlines
 from typing import Generator
 from typing import List
 from typing import Tuple
-
 from flake8_inflammatory_jargon import __version__
-if sys.version_info < (3, 8):
-    import importlib_metadata
-else:
-    import importlib.metadata as importlib_metadata
-
-
 
 
 class InflammatoryJargonChecker:
@@ -70,5 +63,3 @@ class InflammatoryJargonChecker:
         yield from (
             (match.start(), match.group(1)) for match in self._regex.finditer(line)
         )
-
-
