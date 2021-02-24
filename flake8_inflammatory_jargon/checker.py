@@ -1,28 +1,24 @@
 import ast
 import sys
 import re
+import pkg_resources
 import json
 from flake8.utils import stdin_get_value
 from pycodestyle import readlines
 from typing import Generator
 from typing import List
 from typing import Tuple
-
-if sys.version_info < (3, 8):
-    import importlib_metadata
-else:
-    import importlib.metadata as importlib_metadata
-
-WORDS_FILE = 'data/inflammatory_words.json'
+from flake8_inflammatory_jargon import __version__
 
 
-class InflammatoryJargonPlugin:
-    name = __name__
-    version = importlib_metadata.version(__name__)
+class InflammatoryJargonChecker:
+    name = 'flake8_inflammatory_jargon'
+    version = __version__
+    WORDS_FILE = 'data/inflammatory_words.json'
 
     def __init__(self, tree: ast.Module, filename: str) -> None:
         self.filename = filename
-        with open(WORDS_FILE) as f:
+        with open(pkg_resources.resource_filename(__name__, self.WORDS_FILE)) as f:
             self.Inflammatory_words = json.load(f)
         self._pattern = self._get_pattern()
         self._regex = re.compile(f'(?=({self._pattern}))', flags=re.IGNORECASE)
@@ -67,4 +63,3 @@ class InflammatoryJargonPlugin:
         yield from (
             (match.start(), match.group(1)) for match in self._regex.finditer(line)
         )
-
