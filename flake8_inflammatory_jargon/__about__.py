@@ -1,7 +1,7 @@
 """Package information module."""
 __title__ = 'flake8-Inflammatory-Jargon'
 __description__ = 'replace Inflammatory words like blacklist and slave with more appropriate words'
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 __author__ = 'tomgold182'
 __author_email__ = 'tomgold182@gmail.com'
 __url__ = 'https://github.com/tomgold182/flake8-Inflammatory-jargon'
