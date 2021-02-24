@@ -5,7 +5,7 @@ from pkg_resources import parse_requirements
 from setuptools import setup
 
 DIR_PATH = os.path.abspath(os.path.dirname(__file__))
-
+include_package_data = True
 install_requires = ['flake8>=3.3.0']
 
 with open(os.path.join(DIR_PATH, 'README.md'), encoding='utf-8') as file:

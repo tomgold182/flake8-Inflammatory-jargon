@@ -1,5 +1,5 @@
 """Package information module."""
-__title__ = 'flake8-Inflammatory-Jargon-checker'
+__title__ = 'flake8-Inflammatory-Jargon'
 __description__ = 'replace Inflammatory words like blacklist and slave with more appropriate words'
 __version__ = '1.0.0'
 __author__ = 'tomgold182'
